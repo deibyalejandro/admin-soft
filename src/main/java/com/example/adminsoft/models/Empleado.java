@@ -8,7 +8,7 @@ import java.util.Date;
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "empleado_id", nullable = false)
     private Long id;
     private String documento_tipo;
     private Integer documento_numero;
@@ -23,8 +23,9 @@ public class Empleado {
     private Date fecha_hora_modifica;
 
     @ManyToOne
-    @JoinColumn(name = "departamento_id")
+    @JoinColumn(name = "departamentos_id", insertable = false, updatable = false)
     private Departamento departamento;
+
 
     public Long getId() {
         return id;

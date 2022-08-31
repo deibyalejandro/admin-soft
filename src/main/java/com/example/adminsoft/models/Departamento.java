@@ -10,7 +10,7 @@ public class Departamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "departamento_id", nullable = false)
     private Long id;
 
     private String departamento_codigo;
@@ -18,8 +18,8 @@ public class Departamento {
     private Date fecha_hora_crea;
     private Date fecha_hora_modifica;
 
-    @OneToMany(mappedBy = "departamento")
-    private List<Empleado> empleados;
+/*    @OneToMany(mappedBy = "empleado_id")
+    private List<Empleado> empleados;*/
 
     public Long getId() {
         return id;
@@ -61,11 +61,11 @@ public class Departamento {
         this.fecha_hora_modifica = fecha_hora_modifica;
     }
 
-    public List<Empleado> getEmpleados() {
+/*    public List<Empleado> getEmpleados() {
         return empleados;
     }
 
     public void setEmpleados(List<Empleado> empleados) {
         this.empleados = empleados;
-    }
+    }*/
 }

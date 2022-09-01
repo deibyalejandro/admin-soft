@@ -20,4 +20,13 @@ public class EmpleadoService {
     public Empleado saveEmpleado(Empleado empleado){
         return empleadoRepository.save(empleado);
     }
+
+    public boolean deleteEmpleado(Long id) {
+        try{
+            empleadoRepository.deleteById(id);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+    }
 }

@@ -8,7 +8,7 @@ import java.util.Date;
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "empleado_id", nullable = false)
+    @Column(name = "empleado_id")
     private Long id;
     private String documento_tipo;
     private Integer documento_numero;

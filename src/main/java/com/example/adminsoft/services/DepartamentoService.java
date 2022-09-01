@@ -21,4 +21,13 @@ public class DepartamentoService {
     public Departamento saveDepartamento(Departamento departamento) {
         return departamentoRepository.save(departamento);
     }
+
+    public boolean deleteEmpleado(Long id) {
+        try{
+            departamentoRepository.deleteById(id);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+    }
 }

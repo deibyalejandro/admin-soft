@@ -10,9 +10,9 @@ public class Departamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "departamento_id", nullable = false)
+    @Column(name = "departamento_id")
     private Long id;
-    private String departamento_codigo;
+    private Integer departamento_codigo;
     private String departamento_nombre;
     private Date fecha_hora_crea;
     private Date fecha_hora_modifica;
@@ -25,11 +25,11 @@ public class Departamento {
         this.id = id;
     }
 
-    public String getDepartamento_codigo() {
+    public Integer getDepartamento_codigo() {
         return departamento_codigo;
     }
 
-    public void setDepartamento_codigo(String departamento_codigo) {
+    public void setDepartamento_codigo(Integer departamento_codigo) {
         this.departamento_codigo = departamento_codigo;
     }
 

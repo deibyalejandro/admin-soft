@@ -14,7 +14,8 @@ public class Empleado {
     private Integer documento_numero;
     private String nombres;
     private String apellidos;
-    private String departamentos_id;
+    @Column(name = "departamento_id")
+    private String departamento_id;
     private String ciudad;
     private String direccion;
     private String correo_electronico;
@@ -23,9 +24,8 @@ public class Empleado {
     private Date fecha_hora_modifica;
 
     @ManyToOne
-    @JoinColumn(name = "departamentos_id", insertable = false, updatable = false)
+    @JoinColumn(name = "departamento_id", insertable = false, updatable = false)
     private Departamento departamento;
-
 
     public Long getId() {
         return id;
@@ -67,12 +67,12 @@ public class Empleado {
         this.apellidos = apellidos;
     }
 
-    public String getDepartamentos_id() {
-        return departamentos_id;
+    public String getDepartamento_id() {
+        return departamento_id;
     }
 
-    public void setDepartamentos_id(String departamentos_id) {
-        this.departamentos_id = departamentos_id;
+    public void setDepartamento_id(String departamento_id) {
+        this.departamento_id = departamento_id;
     }
 
     public String getCiudad() {

@@ -29,6 +29,7 @@ public class EmpleadoController {
     @PutMapping(path = "/{id}")
     public Empleado updateEmpleado(@PathVariable(value = "id") Long empleadoId, @RequestBody Empleado empleado) {
         empleado.setId(empleadoId);
+        empleado.setFecha_hora_modifica(new Date());
         Empleado updatedEmpleado = empleadoService.saveEmpleado(empleado);
         return updatedEmpleado;
     }

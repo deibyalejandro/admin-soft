@@ -30,6 +30,7 @@ public class DepartamentoController {
     @PutMapping(path = "/{id}")
     public Departamento updateEmpleado(@PathVariable(value = "id") Long empleadoId, @RequestBody Departamento departamento) {
         departamento.setId(empleadoId);
+        departamento.setFecha_hora_modifica(new Date());
         Departamento updatedDepartamento = departamentoService.saveDepartamento(departamento);
         return updatedDepartamento;
     }

@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "6d99a470-f619-403c-ab80-ab587937a40e",
+		"name": "AdminSoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10787589"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documento_tipo\": \"CC\",\r\n    \"documento_numero\": 1036960362,\r\n    \"nombres\": \"deiby \",\r\n    \"apellidos\": \"castano gomez\",\r\n    \"departamentos_id\": 1,\r\n    \"ciudad\": \"Marinilla\",\r\n    \"direccion\": \"calle 32\",\r\n    \"correo_electronico\": \"deibyalejo12@gmail.com\",\r\n    \"telefono\": 54812174\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/empleado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/empleado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/empleado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/departamento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/departamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/departamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departamento_codigo\": \"1\",\r\n    \"departamento_nombre\": \"Antioquia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/departamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"documento_tipo\": \"CC\",\r\n    \"documento_numero\": 1036960362,\r\n    \"nombres\": \"deiby alejandro\",\r\n    \"apellidos\": \"castano gomez\",\r\n    \"departamentos_id\": 1,\r\n    \"ciudad\": \"Marinilla\",\r\n    \"direccion\": \"calle 32\",\r\n    \"correo_electronico\": \"deibyalejo12@gmail.com\",\r\n    \"telefono\": 54812174\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/empleado/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleado",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/empleado/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/empleado/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"empleado",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/departamento/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departamento_codigo\": \"1\",\r\n    \"departamento_nombre\": \"Antioquiaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/departamento/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departamento",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/departamento/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/departamento/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"departamento",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
